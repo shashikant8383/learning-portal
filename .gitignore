@@ -1,0 +1,8 @@
+/vendor/
+/web/sites/default/files/
+/web/sites/default/private/
+/web/sites/default/settings.local.php
+.DS_Store
+.vscode/
+.env
+*.log
