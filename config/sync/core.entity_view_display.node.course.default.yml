@@ -1,0 +1,41 @@
+uuid: c10c7d2a-3099-4017-8dd6-605c58d02878
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.course.field_description
+    - field.field.node.course.field_thumbnail
+    - node.type.course
+  module:
+    - image
+    - text
+    - user
+id: node.course.default
+targetEntityType: node
+bundle: course
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_thumbnail:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
