@@ -1,12 +1,82 @@
-<div class="homepage">
+<div class="learning-page">
+  {% if page.header %}
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        {{ page.header }}
+      </div>
+    </header>
+  {% endif %}
 
-  <section class="hero">
-    <h1>Welcome to Learning Portal</h1>
-    <p>Learn Drupal</p>
-  </section>
+  <main class="learning-main" role="main">
+    <section class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Learning portal</p>
+        <h1>Build practical skills with focused courses.</h1>
+        <p class="hero__summary">
+          Explore curated lessons, track your progress, and keep every learning path organized in one place.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="/courses">Browse courses</a>
+          <a class="button button--secondary" href="/user/login">Continue learning</a>
+        </div>
+      </div>
 
-  <section class="content-area">
-    {{ page.content }}
-  </section>
+      <div class="hero-panel" aria-label="Learning progress summary">
+        <div class="hero-panel__top">
+          <span class="hero-panel__label">Featured path</span>
+          <strong>React Native Basics</strong>
+        </div>
+        <div class="progress-list">
+          <div class="progress-item">
+            <span>Foundations</span>
+            <strong>80%</strong>
+          </div>
+          <div class="progress-bar" aria-hidden="true">
+            <span style="width: 80%"></span>
+          </div>
+          <div class="progress-item">
+            <span>Practice modules</span>
+            <strong>42 lessons</strong>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="stats-grid" aria-label="Portal highlights">
+      <div class="stat-card">
+        <span>01</span>
+        <strong>Structured paths</strong>
+        <p>Courses are grouped around skills so learners always know the next step.</p>
+      </div>
+      <div class="stat-card">
+        <span>02</span>
+        <strong>Practice-first</strong>
+        <p>Lessons can support examples, projects, quizzes, and reference material.</p>
+      </div>
+      <div class="stat-card">
+        <span>03</span>
+        <strong>Admin managed</strong>
+        <p>Course content stays editable from Drupal while the theme handles presentation.</p>
+      </div>
+    </section>
+
+    <section class="learning-section">
+      <div class="section-heading">
+        <p>Course catalog</p>
+        <h2>Start with the latest learning material.</h2>
+      </div>
+
+      <div class="content-area">
+        {{ page.content }}
+      </div>
+    </section>
+  </main>
+
+  {% if page.footer %}
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer__inner">
+        {{ page.footer }}
+      </div>
+    </footer>
+  {% endif %}
 </div>
